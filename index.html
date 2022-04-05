@@ -4,25 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
+    <script src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
     <title>GridBot</title>
 
     <style>
         body { background: black; color: lightgreen; font-family: Courier New, Courier, monospace}
         .panel { width: 600; height: 200; padding: 20px; font-size: 20px; border: solid lightgreen 1px}
-       
+       #left { width: 700px;}
+       #right { float: right;}
+       #container { width: 1400px;}
     </style>
 </head>
 <body>
-    <h1>Bars</h1>
-    <div id="bars" class="panel"></div>
-    <h1>Quotes</h1>
-    <div id="quotes" class="panel"></div>
-    <h1>Trades</h1>
-    <div id="trades" class="panel"></div>
-    
-    
-    
+    <div id="container">
+        <div id="right">
+            <h1>Quotes</h1>
+            <div id="quotes" class="panel"></div>
+            <h1>Trades</h1>
+            <div id="trades" class="panel"></div>
+        </div>
+        <div id="left">
+            <h1>Chart</h1>
+            <div id="chart" class="chart"></div>
+        </div>
+    </div>
     <script src="gridbot.js"></script>
 </body>
 </html>
